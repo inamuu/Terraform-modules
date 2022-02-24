@@ -11,25 +11,25 @@ resource "aws_internet_gateway" "igw" {
 
 resource "aws_subnet" "public_1a" {
     vpc_id            = aws_vpc.vpc.id
-    cidr_block        = var.cid_public_1a
+    cidr_block        = var.cidr_block_public_1a
     availability_zone = "ap-northeast-1a"
 }
 
 resource "aws_subnet" "public_1c" {
     vpc_id            = aws_vpc.vpc.id
-    cidr_block        = var.cid_public_1c
+    cidr_block        = var.cidr_block_public_1c
     availability_zone = "ap-northeast-1c"
 }
 
 resource "aws_subnet" "private_1a" {
     vpc_id            = aws_vpc.vpc.id
-    cidr_block        = var.cid_private_1a
+    cidr_block        = var.cidr_block_private_1a
     availability_zone = "ap-northeast-1a"
 }
 
 resource "aws_subnet" "private_1c" {
     vpc_id            = aws_vpc.vpc.id
-    cidr_block        = var.cidr_private_1c
+    cidr_block        = var.cidr_block_private_1c
     availability_zone = "ap-northeast-1c"
 }
 
