@@ -13,14 +13,14 @@ graph RL
          end
     end
 
-style VPC fill:#c96
-style Public fill:#696
-style Private fill:#696
-style Public-1a fill:#69a
-style Public-1c fill:#69a
-style Private-1a fill:#69a
-style Private-1c fill:#69a
-style InternetGateway fill:#69a
+style VPC fill:#9cc
+style Public fill:#fcc
+style Private fill:#fcc
+style Public-1a fill:#fc0
+style Public-1c fill:#fc0
+style Private-1a fill:#fc0
+style Private-1c fill:#fc0
+style InternetGateway fill:#fc0
 linkStyle 0 stroke:#fff,stroke-width:0px
 linkStyle 1 stroke:#fff,stroke-width:0px
 ```
