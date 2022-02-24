@@ -6,10 +6,10 @@ graph RL
     subgraph VPC
         InternetGateway
          subgraph Public
-             Public-1a --- Public-1c
+             Public-1c --- Public-1a
          end
          subgraph Private
-             Private-1a --- Private-1c
+             Private-1c --- Private-1a
          end
     end
 
