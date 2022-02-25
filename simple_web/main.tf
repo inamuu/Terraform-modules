@@ -1,10 +1,10 @@
 resource "aws_instance" "web" {
   ami                     = var.ami
-  count                   = var.count
+  count                   = var.instance_count
   disable_api_termination = false
   instance_type           = var.instance_type
   key_name                = var.key_name
-  subnet_id               = lookup([aws_subnet.public_1a.id, aws_subnet.public_1c.id], count.index % 2)
+  subnet_id               = lookup(var.public-subnets, count.index % 2)
   vpc_security_group_ids  = [aws_security_group.web.id]
 
   root_block_device {
@@ -22,7 +22,7 @@ resource "aws_eip" "web" {
 resource "aws_security_group" "web" {
   name        = "web"
   description = "web"
-  vpc_id      = aws_vpc.vpc.id
+  vpc_id      = var.vpc_id
 
   ingress {
     from_port   = 22
