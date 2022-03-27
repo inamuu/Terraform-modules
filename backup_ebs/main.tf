@@ -68,7 +68,7 @@ resource "aws_dlm_lifecycle_policy" "policy" {
       }
 
       retain_rule {
-        count = var.count
+        count = var.dlm_count
       }
 
       tags_to_add = {

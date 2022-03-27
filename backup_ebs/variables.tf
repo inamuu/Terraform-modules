@@ -1,3 +1,3 @@
 variable "interval" {}
 variable "times" {}
-variable "count" {}
+variable "dlm_count" {}
