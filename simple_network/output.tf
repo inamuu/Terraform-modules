@@ -11,7 +11,7 @@ output "public-subnets" {
 
 output "private-subnets" {
   value = {
-    0 = aws_subnet.private_1a,
-    1 = aws_subnet.private_1c,
+    0 = aws_subnet.private_1a.id,
+    1 = aws_subnet.private_1c.id,
   }
 }
