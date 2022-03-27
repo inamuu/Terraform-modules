@@ -10,6 +10,9 @@ resource "aws_instance" "web" {
   root_block_device {
     volume_type = "gp2"
     volume_size = var.volume_size
+    tags = {
+      "Snapshot" : var.snapshot_status
+    }
   }
 }
 
