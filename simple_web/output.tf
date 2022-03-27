@@ -5,3 +5,7 @@ output "instance_web" {
 output "eip_web" {
   value = aws_eip.web
 }
+
+output "sg_web" {
+  value = aws_security_group.web
+}
