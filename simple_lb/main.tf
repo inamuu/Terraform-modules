@@ -9,7 +9,8 @@ resource "aws_acm_certificate" "acm_common" {
 }
 
 resource "aws_lb" "lb" {
-  name                       = var.project
+  name = var.project
+  #tfsec:ignore:aws-elb-alb-not-public
   internal                   = false
   load_balancer_type         = "application"
   security_groups            = [aws_security_group.alb.id]
